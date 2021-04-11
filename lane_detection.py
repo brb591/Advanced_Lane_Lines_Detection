@@ -29,7 +29,7 @@ def handle_image(fileName, output_dir, calibration_matrix, calibration_distortio
     cv2.waitKey(0)
   else:
     # Save the image to the output_dir
-    output_file = os.path.join(output_dir, os.path.basename(file_name))
+    output_file = os.path.join(output_dir, os.path.basename(fileName))
     print('Saving image to %s'%output_file)
     cv2.imwrite(output_file, processed_image)
     print('Done.')

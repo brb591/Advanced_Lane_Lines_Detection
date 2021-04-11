@@ -29,10 +29,6 @@ class ImageProcessor:
         sxbinary = self.abs_sobel_thresh(gray, 'x', (20,100))
         s_binary = self.hls_binary(s_channel, (170,255))
 
-        # Only useful for debugging
-        # Stack the binary images
-        #color_binary = np.dstack((np.zeros_like(sxbinary), sxbinary, s_binary)) * 255
-
         # Combine the binary images
         combined_binary = np.zeros_like(sxbinary)
         combined_binary[(s_binary == 1) | (sxbinary == 1)] = 1
