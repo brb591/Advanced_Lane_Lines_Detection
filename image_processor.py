@@ -84,7 +84,6 @@ class ImageProcessor:
             leftx_base = self.base_hyperparameter[0]
             rightx_base = self.base_hyperparameter[1]
             self.high_confidence_counter += 1
-            print("High confidence frame %d of %d"%(self.high_confidence_counter,self.total_frame_counter))
         else:
             # Low confidence on lane line location
             histo = self.image_histogram(wrapped_image)

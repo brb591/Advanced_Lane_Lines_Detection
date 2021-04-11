@@ -20,9 +20,7 @@ def handle_image(fileName, output_dir, calibration_matrix, calibration_distortio
   processed_image = image_processor.process_image(image)
   
   if output_dir is None:
-    # Show both the original and the processed images
-    cv2.imshow('Original', image)
-    cv2.imshow('Processed', processed_image)
+    cv2.imshow('Lane Lines', processed_image)
     
     print('Press any key to dismiss')
     # Wait for the user to press any key
@@ -58,11 +56,9 @@ def handle_video(fileName, calibration_matrix, calibration_distortion):
     if ret == True:
       #Process the frame
       processed_frame = image_processor.process_image(frame)
-      
-      # Display the original frame in its own window
-      cv2.imshow('Original',frame)
+
       # Display the processed frame in a window
-      cv2.imshow('Processed',processed_frame)
+      cv2.imshow('Lane Lines',processed_frame)
       # Press Q on keyboard to  exit
       if cv2.waitKey(10) & 0xFF == ord('q'):
         break
