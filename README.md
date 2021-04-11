@@ -84,3 +84,9 @@ python3 lane_detection.py -i project_video.mp4
 - Lane lines that are worn and faded.
 - Seams in the pavement that run parallel to lane lines (to be fair, this messes up the lane tracking in my car).
 - When the distance between the lanes is not within the range of expectations, the perspective transformation and the window search functions can fail.
+### Intermediate images
+In the ```output_images``` folder:
+- The ```undistorted``` folder contains all of the test images after they have been undistorted
+- The ```perspective``` folder contains all of the test images after they have had their perspective shifted
+- The ```binary``` folder contains all of the test images after they have been converted to a single binary image
+- The ```calibration``` folder contains all of the test images after they have been run through the calibration test program
