@@ -1,7 +1,7 @@
 # Advanced Lane Detection
 ## DGMD E-17 Assignment 5 - Brian Bauer
 
-I have created two python programs, ```calibration_test.py``` and ```lane_detection.py``` which combine to satisfy the requirments of Assignment 5.  Both of these programs use two classes that I have created (```CameraCalibrator``` and ```ImageProcessor```) to accomplish their goals.
+I have created two python programs, ```calibration_test.py``` and ```lane_detection.py``` which combine to satisfy the requirments of Assignment 5.  Both of these programs use two classes that I have created (```CameraCalibrator``` and ```ImageProcessor```) to accomplish their goals.  Please see the Usage section, below, for instructions on how to run the programs.
 
 ### CameraCalibrator (camera_calibrator.py)
 The ```CameraCalibrator``` class has only one purpose: to conduct camera calibration when provided with a large number of chessboard images. When creating an instance of the class, you must provide a directory that contains the images.  To calibrate the camera, invoke the ```calibrate``` method.  When finished, this method returns the calibration matrix and distortion for the camera.  These values can be used to undistort images using the ```ImageProcessor``` class.
